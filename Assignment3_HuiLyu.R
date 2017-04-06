@@ -1,0 +1,8 @@
+label = seq(3,10,1)
+accuracy = c(99.827,99.6736,99.5809,99.6084,99.4764,99.1159,98.9538,98.5613)
+rate = data.frame(label = label, accuracy = accuracy)
+model = lm(accuracy ~ label, data = rate)
+plot(model)
+summary(model)
+plot(label,accuracy)
+abline(model)
